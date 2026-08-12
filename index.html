@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>No Service Tonight | Game Pitch</title>
+    <meta
+      name="description"
+      content="A website pitch for No Service Tonight, a surreal 2D psychological platformer about escaping a late-night office and finding the last route home."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Site navigation">
+      <a class="brand-mark" href="#top" aria-label="No Service Tonight home">
+        <span class="status-dot" aria-hidden="true"></span>
+        No Service Tonight
+      </a>
+      <nav class="nav-links" aria-label="Main sections">
+        <a href="#pitch">Pitch</a>
+        <a href="#trailer">Trailer</a>
+        <a href="#design">Design</a>
+        <a href="#future">Future</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Surreal 2D psychological platformer</p>
+          <h1 id="hero-title">No Service Tonight</h1>
+          <p class="hero-copy">
+            You wake up at work after hours. The monitors still hum, the office
+            keeps rearranging itself, and every locked door points toward one
+            impossible hope: find the last route home before your mind accepts
+            this place as normal.
+          </p>
+          <div class="hero-actions" aria-label="Page shortcuts">
+            <a class="primary-link" href="#trailer">Watch the trailer</a>
+            <a class="secondary-link" href="#future">See the full vision</a>
+          </div>
+        </div>
+
+        <aside class="signal-panel" aria-label="Game status snapshot">
+          <div class="window-title">
+            <span>route_status.exe</span>
+            <span class="window-buttons" aria-hidden="true">_ [] X</span>
+          </div>
+          <div class="signal-readout">
+            <span class="readout-label">Signal</span>
+            <strong>No Service</strong>
+            <span class="readout-label">Last bus</span>
+            <strong>Tonight</strong>
+          </div>
+          <div class="mini-sprites" aria-hidden="true">
+            <img src="assets/player_idle.png" alt="">
+            <img src="assets/l2-final-routing-terminal.png" alt="">
+            <img src="assets/access-door.png" alt="">
+          </div>
+        </aside>
+      </section>
+
+      <section id="pitch" class="section section-dark" aria-labelledby="pitch-title">
+        <div class="section-inner two-column">
+          <div>
+            <p class="eyebrow">The pitch</p>
+            <h2 id="pitch-title">Escape the office. Decode the route. Stay yourself.</h2>
+            <p>
+              No Service Tonight is a short-form horror platformer where office
+              technology becomes the level design. Players jump through
+              collapsing platforms, unlock color-coded terminals, collect clues,
+              and manage a sanity state that changes movement, screen effects,
+              and the tone of the story.
+            </p>
+            <p>
+              The game works because it turns familiar stress into playable
+              pressure. A post-it note becomes a code. A broken route display
+              becomes a map puzzle. A harmless work computer becomes a voice
+              telling you that leaving is selfish.
+            </p>
+          </div>
+
+          <div class="pitch-board" aria-label="Core game loop">
+            <article class="loop-card">
+              <img src="assets/window-terminal.png" alt="Pixel terminal window">
+              <h3>Search</h3>
+              <p>Find codes, notes, pills, route fragments, and strange files.</p>
+            </article>
+            <article class="loop-card">
+              <img src="assets/l2-power-relay-blue.png" alt="Blue relay terminal">
+              <h3>Restore</h3>
+              <p>Power relays activate routes and make hidden platforms usable.</p>
+            </article>
+            <article class="loop-card">
+              <img src="assets/l3-route-map-fragment.png" alt="Route map fragment">
+              <h3>Connect</h3>
+              <p>Rebuild the way home by assembling broken pieces of the route.</p>
+            </article>
+            <article class="loop-card">
+              <img src="assets/sanity_20-40.png" alt="Low sanity portrait">
+              <h3>Hold On</h3>
+              <p>Low sanity slows the player and makes the world feel hostile.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="trailer" class="section trailer-section" aria-labelledby="trailer-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Trailer</p>
+            <h2 id="trailer-title">Gameplay in one playable mood swing</h2>
+            <p>
+              The trailer slot is designed for fast cuts between exploration,
+              terminal puzzles, platforming, sanity pressure, and the surreal
+              final route. Add your gameplay trailer as
+              <strong>assets/trailer.mp4</strong>; until then, the site plays
+              the existing in-game opening video.
+            </p>
+          </div>
+
+          <div class="media-window">
+            <div class="window-title">
+              <span>no_service_trailer.mp4</span>
+              <span class="window-buttons" aria-hidden="true">_ [] X</span>
+            </div>
+            <video
+              id="trailer-video"
+              class="trailer-video"
+              controls
+              preload="metadata"
+              poster="assets/title-background.png"
+              aria-label="No Service Tonight trailer video"
+            >
+              <source src="assets/trailer.mp4" type="video/mp4">
+              <source src="assets/cutscene1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="media-caption">
+              <span>Suggested trailer beats</span>
+              <span>Office wake-up / monitor clues / chase route / parking map / final bus door</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light" aria-labelledby="systems-title">
+        <div class="section-inner">
+          <div class="section-heading narrow">
+            <p class="eyebrow">What the playable version hints at</p>
+            <h2 id="systems-title">A horror game about routine becoming a trap</h2>
+          </div>
+
+          <div class="systems-grid">
+            <article class="system-card">
+              <img src="assets/item-postit.png" alt="Post-it note item">
+              <h3>Clue Chains</h3>
+              <p>
+                Color clues and found notes turn small observations into keypad
+                codes, relay orders, and route decisions.
+              </p>
+            </article>
+            <article class="system-card">
+              <img src="assets/l2-hallway-exit-sign.png" alt="Pixel exit sign">
+              <h3>Platform Pressure</h3>
+              <p>
+                Disappearing floors, moving platforms, and chase sequences make
+                each escape route feel unstable.
+              </p>
+            </article>
+            <article class="system-card">
+              <img src="assets/item-pills.png" alt="Bottle of pills item">
+              <h3>Sanity State</h3>
+              <p>
+                Sanity is more than a health bar: it changes speed, visuals,
+                sound, and the player's confidence in what they see.
+              </p>
+            </article>
+            <article class="system-card">
+              <img src="assets/l3-restored-route-display.png" alt="Restored route display">
+              <h3>Route Home</h3>
+              <p>
+                The main objective is not treasure or victory. It is the
+                human-sized goal of getting back to somewhere safe.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="design" class="section design-section" aria-labelledby="design-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Design and illustrations</p>
+            <h2 id="design-title">A Windows desktop, a dead office, and a dream that lies</h2>
+            <p>
+              The website mirrors the game's look: beveled grey windows, dark
+              transit photography, pixel props, terminal blue, warning red,
+              sickly office greens, and a dreamcore sky that feels too bright to
+              trust.
+            </p>
+          </div>
+
+          <div class="world-tabs" aria-label="World preview tabs">
+            <button class="tab-button active" type="button" data-world="office">Office</button>
+            <button class="tab-button" type="button" data-world="parking">Parking</button>
+            <button class="tab-button" type="button" data-world="dream">Dreamcore</button>
+          </div>
+
+          <div class="world-display" aria-live="polite">
+            <article class="world-panel active" data-world-panel="office">
+              <div class="world-art office-art">
+                <img class="wall-texture" src="assets/l2-hallway-background-panel.png" alt="Olive office wall texture">
+                <img class="prop prop-cubicle" src="assets/cubicle-row.png" alt="Cubicle row sprite">
+                <img class="prop prop-terminal" src="assets/window-terminal.png" alt="Terminal window sprite">
+                <img class="prop prop-error" src="assets/window-error.png" alt="Error window sprite">
+                <img class="prop prop-eye" src="assets/eye-decal.png" alt="Eye decal sprite">
+              </div>
+              <div class="world-copy">
+                <h3>Office and hallway</h3>
+                <p>
+                  The first levels trap the player in familiar work spaces:
+                  cubicles, monitors, power relays, coded computers, and doors
+                  that only open when the system decides you have earned it.
+                </p>
+              </div>
+            </article>
+
+            <article class="world-panel" data-world-panel="parking">
+              <div class="world-art parking-art">
+                <img class="wall-texture" src="assets/l3-parking-background-panel.png" alt="Parking garage panel texture">
+                <img class="prop prop-light" src="assets/l3-parking-overhead-light.png" alt="Parking overhead light sprite">
+                <img class="prop prop-map" src="assets/l3-route-map-fragment.png" alt="Route map fragment sprite">
+                <img class="prop prop-display" src="assets/l3-broken-route-display.png" alt="Broken route display sprite">
+                <img class="prop prop-gate" src="assets/l3-parking-exit-gate.png" alt="Parking exit gate sprite">
+              </div>
+              <div class="world-copy">
+                <h3>Parking garage</h3>
+                <p>
+                  The route puzzle expands the game beyond office rooms. The
+                  player hunts for map fragments while the low-sanity heartbeat,
+                  slower movement, and harder jumps make escape feel urgent.
+                </p>
+              </div>
+            </article>
+
+            <article class="world-panel" data-world-panel="dream">
+              <div class="world-art dream-art">
+                <img class="dream-bg" src="assets/l4-dreamcore-vast-background.png" alt="Dreamcore landscape background">
+                <img class="prop prop-house" src="assets/l4-dreamcore-house.png" alt="Dreamcore house sprite">
+                <img class="prop prop-door" src="assets/l4-dreamcore-final-door.png" alt="Dreamcore final door sprite">
+                <img class="prop prop-tower" src="assets/l4-dreamcore-water-tower.png" alt="Dreamcore water tower sprite">
+                <img class="prop prop-sign" src="assets/l4-dreamcore-sign.png" alt="Dreamcore sign sprite">
+              </div>
+              <div class="world-copy">
+                <h3>Final route</h3>
+                <p>
+                  The dreamcore level should look peaceful at first, then become
+                  the most direct confrontation with the player's doubts. It is
+                  bright, open, and emotionally wrong.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sanity-section" aria-labelledby="sanity-title">
+        <div class="section-inner sanity-layout">
+          <div>
+            <p class="eyebrow">Player state</p>
+            <h2 id="sanity-title">Sanity is the second controller</h2>
+            <p>
+              As the office speaks through monitors and terminals, the player's
+              portrait changes. The full game can push that system further:
+              unstable text, altered platform timing, unreliable route signs,
+              and dialogue choices that become harder to trust.
+            </p>
+            <div class="sanity-controls" aria-label="Sanity states">
+              <button class="sanity-button active" type="button" data-sanity="steady">Steady</button>
+              <button class="sanity-button" type="button" data-sanity="strained">Strained</button>
+              <button class="sanity-button" type="button" data-sanity="fractured">Fractured</button>
+            </div>
+          </div>
+
+          <div class="sanity-window" aria-live="polite">
+            <div class="window-title">
+              <span>sanity_monitor.sys</span>
+              <span class="window-buttons" aria-hidden="true">_ [] X</span>
+            </div>
+            <div class="sanity-body">
+              <img id="sanity-portrait" src="assets/sanity_60-80.png" alt="Current sanity portrait">
+              <div class="meter-shell" aria-hidden="true">
+                <span id="sanity-meter" class="meter-fill"></span>
+              </div>
+              <h3 id="sanity-label">Steady enough to move</h3>
+              <p id="sanity-copy">
+                The player can read clues clearly and keep a normal pace, but
+                the office is already starting to feel personally targeted.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="future" class="section future-section" aria-labelledby="future-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Further development</p>
+            <h2 id="future-title">What more can the game be?</h2>
+            <p>
+              The complete vision is a compact, story-driven platform horror
+              game where every new area asks the same question in a different
+              way: do you keep searching for the route home, or let the place
+              convince you that leaving is impossible?
+            </p>
+          </div>
+
+          <div class="roadmap">
+            <article class="roadmap-item">
+              <span class="roadmap-number">01</span>
+              <h3>Stronger story arc</h3>
+              <p>
+                Add more memories, coworker messages, and environmental clues
+                that explain why the office has such power over the player.
+              </p>
+            </article>
+            <article class="roadmap-item">
+              <span class="roadmap-number">02</span>
+              <h3>Branching route puzzles</h3>
+              <p>
+                Expand terminals so players can choose which route to power,
+                creating optional risks, shortcuts, and hidden story fragments.
+              </p>
+            </article>
+            <article class="roadmap-item">
+              <span class="roadmap-number">03</span>
+              <h3>Deeper sanity consequences</h3>
+              <p>
+                Make sanity affect audio, platform visibility, dialogue pacing,
+                and the reliability of signs without making the game unfair.
+              </p>
+            </article>
+            <article class="roadmap-item">
+              <span class="roadmap-number">04</span>
+              <h3>Presentation polish</h3>
+              <p>
+                Capture the final gameplay trailer, tune checkpoints, improve
+                accessibility options, and build a cleaner ending sequence for
+                the class presentation.
+              </p>
+            </article>
+          </div>
+
+          <div class="closing-window">
+            <div class="window-title">
+              <span>final_route.txt</span>
+              <span class="window-buttons" aria-hidden="true">_ [] X</span>
+            </div>
+            <p>
+              No Service Tonight can become a focused horror story about burnout,
+              anxiety, and the strange courage of wanting to go home. The
+              playable version shows the mechanics; this site shows the full
+              direction.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>No Service Tonight</span>
+      <span>Game pitch website</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
