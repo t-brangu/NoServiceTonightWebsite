@@ -67,3 +67,31 @@ tabButtons.forEach((button) => {
     button.classList.add("active");
   });
 });
+
+document.querySelectorAll("[data-slideshow]").forEach((slideshow) => {
+  const slides = Array.from(slideshow.querySelectorAll("[data-slide]"));
+  const previousButton = slideshow.querySelector("[data-prev]");
+  const nextButton = slideshow.querySelector("[data-next]");
+  const status = slideshow.querySelector("[data-slide-status]");
+  let currentIndex = 0;
+
+  if (slides.length === 0) {
+    return;
+  }
+
+  const showSlide = (nextIndex) => {
+    currentIndex = (nextIndex + slides.length) % slides.length;
+
+    slides.forEach((slide, index) => {
+      slide.classList.toggle("active", index === currentIndex);
+    });
+
+    if (status) {
+      status.textContent = `${currentIndex + 1} / ${slides.length}`;
+    }
+  };
+
+  previousButton?.addEventListener("click", () => showSlide(currentIndex - 1));
+  nextButton?.addEventListener("click", () => showSlide(currentIndex + 1));
+  showSlide(0);
+});
